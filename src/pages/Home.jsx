@@ -1,9 +1,11 @@
-
+import React from 'react'
 import { useEffect, useState } from 'react';
 import api from '../api/posts'
 import Card from '../components/Card';
-const Asteroid = () =>{
-   const [nearEarthData, setNearEarthData] = useState([])
+
+function Home() {
+
+    const [nearEarthData, setNearEarthData] = useState([])
    
     useEffect(()=>{
         // FETCHING DATA 
@@ -24,8 +26,6 @@ const Asteroid = () =>{
         }
         fetchRecent();
     },[])
-
-    console.log(nearEarthData)
     const preprocessData = () =>{
         const cards = []
         for(let data of nearEarthData){
@@ -33,18 +33,15 @@ const Asteroid = () =>{
          }
          return cards
     }
-    
-    return(
-        <>
+
+  return (
+    <>
         <div>
             <h3>Asteroids</h3>
             {preprocessData()}
         </div>
-        </>
-        
-    );
-
+    </>
+  )
 }
 
-
-export default Asteroid
+export default Home
