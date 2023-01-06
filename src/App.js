@@ -1,5 +1,4 @@
-import './App.css';
-import Asteroid from './experiments/Asteroid';
+import './App.scss';
 import Home from './pages/Home';
 
 function App() {

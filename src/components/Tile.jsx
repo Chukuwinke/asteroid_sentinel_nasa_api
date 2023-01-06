@@ -7,7 +7,8 @@ const Tile = ({data}) => {
         is_potentially_hazardous_asteroid:hazardus,
         id,
         name}= data;
-        const {close_approach_date_full: closeApproachDate}= closeApproachData[0];
+
+    const {close_approach_date_full: closeApproachDate}= closeApproachData[0];
     hazardus = hazardus.toString()
 
   return (
